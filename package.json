@@ -1,0 +1,25 @@
+{
+  "name": "discord-r9k-framework",
+  "version": "0.1.0",
+  "description": "Framework used for R9K and other Discord bots",
+  "repository": "https://github.com/SarenCurrie/discord-r9k-framework",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint ."
+  },
+  "author": "Saren Currie",
+  "license": "MIT",
+  "dependencies": {
+    "discord.io": "^2.5.1",
+    "lokijs": "^1.4.3",
+    "node-schedule": "^1.2.4"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-airbnb-base": "^11.1.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.3"
+  }
+}
