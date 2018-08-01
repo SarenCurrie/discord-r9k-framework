@@ -43,7 +43,7 @@ const addCronTrigger = (cron, callback) => {
 
 const addPlugin = (plugin) => {
   if (!initialized) {
-    console.console.error('Please call init first.');
+    console.error('Please call init first.');
   }
   plugin.init({
     addMessageTrigger,  // On submit or edit
@@ -81,7 +81,6 @@ const init = () => new Promise((resolve, reject) => {
         let wasTrigger = message.startsWith('!');
 
         const doTrigger = (trigger, matches) => {
-          console.log('triggered');
           const result = trigger.action({
             user,
             userId,
@@ -92,10 +91,6 @@ const init = () => new Promise((resolve, reject) => {
             bot,
             matches,
           });
-
-          console.log('sending this:');
-          console.log(result);
-          console.log(`to channel: ${channelId}`);
 
           if (result && typeof result === 'string') {
             bot.sendMessage({
@@ -132,16 +127,12 @@ const init = () => new Promise((resolve, reject) => {
         const textEvents = ['MESSAGE_CREATE', 'MESSAGE_UPDATE'];
         let wasTrigger = false;
 
-        // console.log(event);
-
         if (!event.d) {
-          console.log('Ignoring event with no data.');
           return;
         }
 
         // Ignore other bots
         if (event.d.author && event.d.author.bot) {
-          console.log('Ignoring bot post.');
           return;
         }
 
