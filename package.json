@@ -1,6 +1,6 @@
 {
   "name": "discord-r9k-framework",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Framework used for R9K and other Discord bots",
   "repository": "https://github.com/SarenCurrie/discord-r9k-framework",
   "main": "src/app.js",
